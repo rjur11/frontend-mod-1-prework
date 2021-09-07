@@ -8,7 +8,7 @@ var specialAbility = "Teleportation";
 //   greeting should be assigned to a string that uses concatenation to include the heroName
 var greeting = "Hello, I'm a superhero and my name is " + heroName;
 //   catchphrase should be assigned to a string that uses interpolation to include the specialAbility
-var catchPhrase = "My super power is " + specialAbility;
+var catchPhrase = `My super power is ${specialAbility}`;
 
 // Declare two variables - power AND energy - set to integers
 var power = 50;
@@ -34,10 +34,10 @@ var sideKicks = ["Linus the Cat", "Batman", "Spiderman"];
 console.log(sideKicks[0]);
 
 // Print the last archEnemy to the console
-console.log(archEnemies[2]);
+console.log(archEnemies[archEnemies.length - 1]);
 
 // Write some code to add a new archEnemy to the archEnemies array
-archEnemies.push("Darth Vadar");
+archEnemies.push("Darth Vader");
 
 // Print the archEnemies array to console to ensure you added a new archEnemy
 console.log(archEnemies);
@@ -52,14 +52,12 @@ console.log(sideKicks);
 //   - dangerLevel should be an integer
 //   - saveTheDay should be a string a hero would say once they save the day
 //   - badExcuse should be a string a hero would say if they are too afraid of the dangerLevel
-var dangerLevel = 10;
-var saveTheDay = "The day is saved!";
-var badExcuse = "I think my fridge is unplugged... gotta go!";
+
 
 function assessSituation(dangerLevel, saveTheDay, badExcuse) {
   if (dangerLevel < 10) {
     console.log("Meh. Hard pass.");
-  } else if (dangerLevel > 10 || dangerLevel < 50) {
+  } else if (10 < dangerLevel && dangerLevel <= 50) {
     console.log(saveTheDay);
   } else {
     console.log(badExcuse);
@@ -75,8 +73,11 @@ function assessSituation(dangerLevel, saveTheDay, badExcuse) {
 var announcement = 'Never fear, the Courageous Curly Bracket is here!';
 var excuse = 'I think I forgot to lock up my 1992 Toyota Coralla. Be right back.';
 // assessSituation(99, announcement, excuse) > Should print - 'I think I forgot to lock up my 1992 Toyota Coralla. Be right back.'
+assessSituation(99, announcement, excuse);
 //assessSituation(21, announcement, excuse) > should print - 'Never fear, the Courageous Curly Bracket is here!'
+assessSituation(21, announcement, excuse);
 //assessSituation(3, announcement, excuse) > should print - "Meh. Hard pass."
+assessSituation(3, announcement, excuse);
 
 // Declare a new variable - scaryMonster - assigned to an Object with the following key/values
 //   - name (string)
