@@ -4,7 +4,7 @@
 //Build a Bear
 // Create function buildABear that takes in the args name, age, fur, clothes, and specialPower
 function buildABear(name, age, fur, clothes, specialPower) {
-  var greeting = `Hey partner! My name is ${name} - will you be my friend?!`; // Assign variable greeting to string "Hey partner, my name is (arg name)- will you be my friend?"
+  var greeting = `Hey partner! My name is ${name} - will you be my friend?!`; // Assign variable greeting to string "Hey partner, my name is (arg name)- will you be my friend?" using template literals with substitution
   var demographics = [name, age]; // Assign variable demographics to an array containing name and age
   var powerSaying = "Did you know that I can " + specialPower + " ?"; // Assign variable powerSaying to string "Did you know that I can" concatenated with var specialPower and "?"
   // Create object builtBear that assigns the key value pairs of: basicInfo (demographics array), clothes to arg clothes, exterior to arg fur, fixed cost of 49.99, sayings (array of greeting, powerSaying and "Goodnight my friend"), and isCuddly(bool set to true)
@@ -31,22 +31,23 @@ buildABear('Sleepy', 2, 'purple', ['pajamas', 'sleeping cap'], 'sleeping in');
 function fizzBuzz(num1, num2, range) {
   // Iterate through our range
   for (var i = 0; i <= range; i++) {
-    // If num1 and num2 are even, log "fizzbuzz"
+    // If i is divisible by num1 and i is divisible by num2, log "fizzbuzz"
     if (i % num1 === 0 && i % num2 === 0) {
       console.log('fizzbuzz');
-      // if num1 is even, log "fizz"
+      // if i is divisible by num1, log "fizz"
     } else if (i % num1 === 0) {
       console.log('fizz');
-      // if num2 is even, log "buzz"
+      // if i is divisible by num2, log "buzz"
     } else if (i % num2 === 0) {
       console.log('buzz');
-      // if we get anything other than the above cases, log the number
+      // if i is not divisible by num1 or num2, log i
     } else {
       console.log(i);
     }
   }
 }
 
-// Call function fizzBuzz twice with two sets of args
-fizzBuzz(3, 5, 100); 
+// Print numbers 0-100 inclusive replacing multiples of 3 and/or 5 appropriately
+fizzBuzz(3, 5, 100);
+// Print numbers 0-400 inclusive replacing multiples of 5 and/or 8 appropriately
 fizzbuzz(5, 8, 400);
