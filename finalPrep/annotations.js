@@ -49,5 +49,7 @@ function fizzBuzz(num1, num2, range) {
 
 // Print numbers 0-100 inclusive replacing multiples of 3 and/or 5 appropriately
 fizzBuzz(3, 5, 100);
+
 // Print numbers 0-400 inclusive replacing multiples of 5 and/or 8 appropriately
+// This will crash as there is not a defined function fizzbuzz
 fizzbuzz(5, 8, 400);
